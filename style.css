@@ -1,0 +1,44 @@
+body{
+    font-family: 'Inter';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Чтобы div был всегда в центре экрана */
+    margin: 0;
+}
+
+div{
+    position: relative;
+    background: black;
+    color: white;
+    width: 400px; /* Размер div изменен для лучшей визуализации */
+    height: 300px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 15px 15px 15px gray;
+    animation: moveInCircle 5s infinite linear; /* Бесконечная круговая анимация */
+}
+
+h1{
+    color: white;
+}
+
+@keyframes moveInCircle {
+    0% {
+        transform: translate(0, 0); /* Начало внизу */
+    }
+    25% {
+        transform: translate(100px, 0); /* Перемещение вправо */
+    }
+    50% {
+        transform: translate(100px, 100px); /* Перемещение вверх */
+    }
+    75% {
+        transform: translate(0, 100px); /* Перемещение влево */
+    }
+    100% {
+        transform: translate(0, 0); /* Возвращение к начальной позиции */
+    }
+}
